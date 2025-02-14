@@ -1,0 +1,110 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #ff7e5f, #feb47b);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.heading{
+    text-align: center;
+    font-family: sans-serif;
+    
+    
+}
+.int_box{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid blue;
+    width: 300px;
+    padding: 100px;
+    border-radius: 10px;
+    box-shadow: -10px 10px 10px ;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    
+}
+.numberInput{
+   border-radius: 5px;
+   width: 35%;
+   padding: 5px;
+   margin: 10px;
+   border:2px solid #333
+}
+.typeInput{
+    border-radius: 5px;
+   width: 35%;
+   padding: 5px;
+   margin: 10px;
+   margin: 10px;
+   border:2px solid #333
+}
+.result_button{
+    width: 70px;
+    margin-top: 10px;
+    background-color: rgb(245, 250, 245);
+    
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    
+}
+.result_button:hover{
+    background-color: #2980b9;
+    border: 2px solid black;
+
+    
+}
+
+body, .int_box {
+    font-size: 16px;
+}
+
+
+@media (max-width: 767px) {
+    body {
+        
+        font-size: 14px;
+        padding: 10%;
+    }
+    .int_box{
+        width: 30%;
+        margin: 10%;
+        margin-left: 20%;
+    }
+.typeInput,.numberInput{
+        width: 120px;
+    }
+    .heading{
+        margin-left: 20%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .int_box{
+        
+        font-size: 16px;
+        align-items: center;
+
+    }
+    .heading{
+        
+        width: 300px;
+        
+        margin-left: 20%;
+       
+    }
+}
+
+
+@media (min-width: 1025px) {
+    body,.int_box {
+        
+        font-size: 18px;
+    }
+}
+

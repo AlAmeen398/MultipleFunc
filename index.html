@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./child.css">
+    <link rel="shortcut icon" href="https://i.ytimg.com/vi/glkQwKA5_PU/hqdefault.jpg" type="image/x-icon">
+    <title>Multiple Dropdown</title>
+</head>
+
+<body>
+    <div>
+        <div>
+            <h1 class="heading">Multiple Dropdown Function</h1>
+        </div>
+        <div class="int_box">
+            <input class="numberInput" type="text" placeholder="number" id="number1">
+            
+            <select class="typeInput" id="type">
+                <option value="reverseNumber">Reverse Number</option>
+                <option value="Fibonacci">Fibonacci</option>
+                <option value="Armstrong">Armstrong</option>
+            </select>
+            <button class="result_button" onclick="callFunction()">Result</button>
+            <p id="result"> Result:</p>
+
+        </div>
+    </div>
+    <script>
+
+        function callFunction() {
+
+            let numElement = number1.value;
+            let selectTypeElement = type.value;
+            console.log(selectTypeElement)
+            if (!numElement) {
+
+                alert("please enter the value")
+
+            }
+            else {
+                if (type.value === "reverseNumber") {
+                    reversenum(numElement)
+                }
+                else if (type.value === "Fibonacci") {
+                    fibonacci(numElement)
+
+                }
+                else if (type.value === "Armstrong") {
+                    armstrongFun(numElement)
+                }
+            }
+
+        }
+
+
+        function reversenum(numElement2) {
+            let reverses = numElement2.split("").reverse().join("")
+            document.getElementById("result").innerHTML = `Result : ${reverses}`;
+        }
+        function fibonacci(numElement2) {
+            let fib1 = 0, fib2 = 1;
+            let temp;
+            document.getElementById("result").innerHTML = `fibanacci series till ${numElement2}:` + " "
+            for (let i = 0; fib1 <= numElement2; i++) {
+                temp = fib1 + fib2
+                console.log(fib1);
+                document.getElementById("result").innerHTML = document.getElementById("result").innerHTML + ` ` + fib1;
+                fib1 = fib2;
+                fib2 = temp;
+
+            }
+
+
+        }
+        function armstrongFun(numElement2) {
+            let armsNum= numElement2;
+            let armsNumSplit=armsNum.split("")
+            let armsNumLength=armsNumSplit.length
+            let armsResult=0;
+            for(let i=0;i<armsNumLength; i++){
+                armsResult += armsNumSplit[i]**armsNumLength;
+                
+                
+ 
+            }
+            if(armsResult==numElement2){
+                document.getElementById("result").innerHTML= `${armsResult} is an Amstrong Number`
+            }
+            else{
+                document.getElementById("result").innerHTML=`${armsResult}is not an Amstrong Number`
+            }
+            
+            
+            
+            
+            
+
+
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>
