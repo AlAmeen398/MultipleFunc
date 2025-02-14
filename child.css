@@ -67,46 +67,49 @@ body, .int_box {
 
 @media (max-width: 767px) {
     body {
-        
         font-size: 14px;
-        padding: 10%;
+        padding: 5vw; 
         width: 100%;
-        height:100%
+        height: 100%;
+        box-sizing: border-box;
     }
-    .int_box{
-        width: 30%;
-        margin: 10%;
-        margin-left: 20%;
+    
+    .int_box {
+        width: 50%; 
+        min-width: 120px;
+        margin-top: 10%;
     }
-.typeInput,.numberInput{
-        width: 120px;
+    
+    .typeInput, .numberInput {
+        width: 100%;
+        max-width: 150px; 
     }
-    .heading{
-        margin-left: 20%;
+    
+    .heading {
+        text-align: center; 
+        margin: 0 auto;
+        margin-top: 10%;
+        
     }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-    .int_box{
-        
+    .int_box {
         font-size: 16px;
-        align-items: center;
-
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        text-align: center; 
     }
-    .heading{
-        
+
+    .heading {
         width: 300px;
-        
-        margin-left: 20%;
-       
+        margin: 0 auto; 
+        text-align: center; 
     }
 }
 
 
-@media (min-width: 1025px) {
-    body,.int_box {
-        
-        font-size: 18px;
-    }
-}
+
+
 
